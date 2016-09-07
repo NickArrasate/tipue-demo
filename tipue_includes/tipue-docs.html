@@ -1,0 +1,14 @@
+<h3>These instructions will help you get Tipue site search integrated into your site.</h3>
+<p>
+  First, copy the <b>tipuesearch</b> directory into the top level of your project.
+</p>
+<p>You will need to include the <em>tipue_includes</em> directory into your project's includes directory.</p>
+<p>Then, you will need to place this line in the <em>head.html</em> include file: <b>  {% raw %}{% include tipue_includes/tipue-head.html %}{% endraw %}
+</b></p>
+<p>
+  And this one in the <em>footer.html</em> include: <b>{% raw %} {% include tipue_includes/tipue-footer.html %}
+{% endraw %}</b>
+</p>
+<p>Finally, include <b>
+  {% raw %}{% include tipue_includes/tipue-search-box.html %}{% endraw %}
+</b> wherever you would like the search bar to appear.</p>

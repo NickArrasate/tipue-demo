@@ -1,0 +1,22 @@
+<script>
+ var tipuesearch = {"pages": [
+   {% for post in site.posts %}
+     {
+       "title": "{{ post.title }}",
+       "categories": "{{ post.categories }}",
+       "url": "{{ post.url }}",
+       "text": "{{ post.content | strip_newlines }}",
+       "tags": ""
+     }
+     {% unless forloop.last %},{% endunless %}
+   {% endfor %}
+ ]
+};
+console.log(tipuesearch.pages);
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='/tipuesearch/tipuesearch_set.js'></script>
+<link href="/tipuesearch/tipuesearch.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="/tipuesearch/cse-styles.css" rel="stylesheet">
+<script src='/tipuesearch/detect.js'></script>
